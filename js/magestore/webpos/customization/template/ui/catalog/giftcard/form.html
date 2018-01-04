@@ -1,0 +1,65 @@
+<!--
+  ~ Magestore
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the Magestore.com license that is
+  ~ available through the world-wide-web at this URL:
+  ~ http://www.magestore.com/license-agreement.html
+  ~
+  ~ DISCLAIMER
+  ~
+  ~ Do not edit or add to this file if you wish to upgrade this extension to newer
+  ~ version in the future.
+  ~
+  ~ @category    Magestore
+  ~ @package     Magestore_Webpos
+  ~ @copyright   Copyright (c) 2016 Magestore (http://www.magestore.com/)
+  ~ @license     http://www.magestore.com/license-agreement.html
+  -->
+<div id="webpos_giftcard" class="col-sm-8 col-left wrap-account-container">
+    <header class="o-header">
+        <nav class="o-header-nav">
+            <label class="title title-header-page" data-bind="i18n: ('Gift Card')"/>
+        </nav>
+    </header> 
+    <main class="main-account">
+        <div class="wrap-main-account">
+            <div class="panel panel-default">
+                <div class="fieldset panel-body">
+                    <div class="field required input-box">
+                        <label data-bind="i18n: 'Gift Card Code'"></label>
+                        <input class="input-text required-entry"  id="coupon_code"  type="text" data-validate="{'required-entry':true}" data-bind="textInput:coupon_code,event:{change:setCode}"/>
+                    </div>
+                    <div class="field required input-box">
+                        <label data-bind="i18n: 'Amount'"></label>
+                        <input class="input-text required-entry"  id="amount"  type="text" data-validate="{'required-entry':true}" data-bind="textInput:amount,event:{change:setAmount}"/>
+                    </div>
+                    <div class="field required input-box">
+                        <label data-bind="i18n: 'Status'"></label>
+                         <select class="form-select" id="status" data-bind="options: optionsArray,
+			                    optionsText: function(item) {return item.text;},
+			                    optionsValue: function(item) {return item.value;},event:{change:setStatus}
+			                    ">
+			            </select>
+
+                    </div>
+                      <div class="field required input-box">
+
+                    <div class="ms-actions" style="margin-left:250px">
+            			   <button class="actions btn-cl-cfg-active" data-bind="i18n: 'Add to cart', click:addToCart"></button>
+        			</div>
+        			</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<style>
+	
+	.form-select{    width: 326px;
+    height: 35px;
+    line-height: 35px;
+    color: #3c4857;
+    font-size: 14px}
+</style>
